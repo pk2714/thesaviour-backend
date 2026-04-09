@@ -9,7 +9,10 @@ import campaignRoutes from "./routes/campaigns";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://thesaviour-static.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
